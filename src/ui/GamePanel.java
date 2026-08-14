@@ -55,7 +55,7 @@ public class GamePanel extends JPanel {
     private void drawEntities(Graphics2D g) {
         Position pacPos = game.getPacman().getPosition();
         g.setColor(Color.YELLOW);
-        g.fillOval(pacPos.x() * TILE_SIZE + 2, pacPos.y() * TILE_SIZE + 2, TILE_SIZE - 4, TILE_SIZE - 4);
+        g.fillOval(pacPos.x() * TILE_SIZE+2, pacPos.y() * TILE_SIZE+2, TILE_SIZE - 4, TILE_SIZE - 4);
 
         game.getGhosts().forEach(ghost -> {
             g.setColor(Color.RED);

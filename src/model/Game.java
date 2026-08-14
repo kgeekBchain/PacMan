@@ -37,6 +37,7 @@ public class Game {
     public void handleInput(Direction newDirection) {
         if (state != GameState.RUNNING) return;
         pacman.setDirection(newDirection);
+        pacman.addScore(-1);
     }
 
     private void checkCollisions() {

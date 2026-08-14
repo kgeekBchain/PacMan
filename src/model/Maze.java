@@ -27,7 +27,7 @@ public class Maze {
                 } else if (isSpawnCell(x,y)) {
                     grid[y][x] = TileType.EMPTY;
                 }else {
-                    if (grid[y - 1][x] == TileType.WALL && grid[y][x - 1] == TileType.WALL) {
+                    if (grid[y - 1][x] == TileType.WALL && grid[y][x - 1] == TileType.WALL || grid[y + 1][x] == TileType.WALL && grid[y][x + 1] == TileType.WALL || grid[y + 1][x+1] == TileType.WALL && grid[y+1][x -1] == TileType.WALL || grid[y - 1][x-1] == TileType.WALL && grid[y+1][x + 1] == TileType.WALL) {
                         grid[y][x] = TileType.PELLET;
                     } else {
                         grid[y][x] = random.nextInt(100) < 15 ? TileType.WALL : TileType.PELLET;
